@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: room day 1.ma
-//Last modified: Mon, Sep 01, 2025 06:15:17 PM
+//Name: room.ma
+//Last modified: Tue, Sep 02, 2025 03:12:31 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,19 +12,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7021B66C-4944-1EEE-944B-DEA8D9D51367";
+fileInfo "UUID" "8F101D0D-40BE-2389-302B-AFB2688D25D9";
 createNode transform -s -n "persp";
 	rename -uid "610F030F-42BB-0BD6-E06F-29B3CC0AB158";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.9550887789753615 2.7101807465053844 -5.5025621450245401 ;
-	setAttr ".r" -type "double3" -23.3999999999903 207.59999999999232 0 ;
+	setAttr ".t" -type "double3" -1.9021138961537851 0.016161102429254622 -0.50934617577036789 ;
+	setAttr ".r" -type "double3" 7.7999999999952907 -142.00000000000261 0 ;
 	setAttr ".rpt" -type "double3" -8.3292440576802075e-15 -2.3078673548595357e-15 -6.3390560866230088e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8AB7988B-4F5F-FE28-CB53-259B5DFF6F53";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 6.9500073205473143;
+	setAttr ".coi" 1.6756573667944497;
 	setAttr ".ow" 5.2759051593596551;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -3363,20 +3363,20 @@ createNode mesh -n "FloorShape" -p "Floor";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B0B0232F-45E5-1D18-938C-04A7E92CEDB7";
+	rename -uid "0AE41A49-4430-357D-E300-288406301B40";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "49E0E1EB-49DA-9532-9A45-B5A8EE2C6D57";
+	rename -uid "54F56D5A-4BA9-27D1-DEAE-A18D73397474";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A491974B-49B0-5769-61C7-C893053203C9";
+	rename -uid "C90AABB9-47B1-7065-22BB-16B34E7178C1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AFD4473D-4E9D-80A0-D361-E9845A271B29";
+	rename -uid "7D5F1EFE-4AD7-2317-1424-E0B6DC7839DE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "26591E24-4A59-D575-A218-E2B88BBBE402";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "762593FD-483F-A3A8-F72E-24B1D1CF2F4A";
+	rename -uid "8D05FE00-499A-1EA5-B1A7-96972B7E1399";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "2CCE8145-4F96-F0E1-E1FB-218B5738C992";
 	setAttr ".g" yes;
@@ -3488,8 +3488,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId35.id" "FloorShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "FloorShape.iog.og[0].gco";
 connectAttr "groupId34.id" "FloorShape.ciog.cog[0].cgid";
@@ -3507,4 +3505,4 @@ connectAttr "FloorShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "FloorShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId35.msg" ":initialShadingGroup.gn" -na;
-// End of room day 1.ma
+// End of room.ma
