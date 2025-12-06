@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 145674089}
   - component: {fileID: 145674088}
   - component: {fileID: 145674087}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 146167242}
   - component: {fileID: 146167241}
   - component: {fileID: 146167240}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,6 +1140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Block (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2069256436319778360, guid: 38b3e243685df754ba1176ca0f45309c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1221,7 +1225,7 @@ GameObject:
   - component: {fileID: 534489137}
   - component: {fileID: 534489136}
   - component: {fileID: 534489135}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3245342200388961096, guid: 785586f77bd07eb4b8807e084bd44819, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49999997
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3245342200388961096, guid: 785586f77bd07eb4b8807e084bd44819, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2161,7 +2165,7 @@ GameObject:
   - component: {fileID: 1072937324}
   - component: {fileID: 1072937323}
   - component: {fileID: 1072937322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Nav
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2298,6 +2302,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5486748104156119810, guid: 73406da12df98e3468d8101419d1803c, type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1852568505}
     - target: {fileID: 8324416056114540848, guid: 73406da12df98e3468d8101419d1803c, type: 3}
       propertyPath: m_Name
       value: Spring (2)
@@ -3357,7 +3365,7 @@ GameObject:
   - component: {fileID: 1820083794}
   - component: {fileID: 1820083793}
   - component: {fileID: 1820083792}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3519,10 +3527,10 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -3531,7 +3539,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.175, z: 0}
 --- !u!4 &1852568507
@@ -3884,6 +3892,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5486748104156119810, guid: 73406da12df98e3468d8101419d1803c, type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1852568505}
+    - target: {fileID: 5486748104156119810, guid: 73406da12df98e3468d8101419d1803c, type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FakeJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486748104156119810, guid: 73406da12df98e3468d8101419d1803c, type: 3}
+      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SimpleCharacterController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8324416056114540848, guid: 73406da12df98e3468d8101419d1803c, type: 3}
       propertyPath: m_Name
       value: Spring (1)
@@ -3984,6 +4004,10 @@ PrefabInstance:
     - target: {fileID: 2069256436319778360, guid: 38b3e243685df754ba1176ca0f45309c, type: 3}
       propertyPath: m_Name
       value: Hard Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069256436319778360, guid: 38b3e243685df754ba1176ca0f45309c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
