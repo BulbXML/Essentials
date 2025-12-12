@@ -1,15 +1,17 @@
 //Maya ASCII 2026 scene
 //Name: scene2.ma
-//Last modified: Fri, Nov 14, 2025 10:31:25 PM
+//Last modified: Thu, Dec 11, 2025 05:13:11 PM
 //Codeset: 1252
 file -rdi 1 -ns "waow_iphone" -dr 1 -rfn "waow_iphoneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//waow iphone.ma";
 file -rdi 1 -ns "asset1" -rfn "asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset1.ma";
 file -rdi 1 -ns "asset3" -rfn "asset3RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset3.ma";
+file -rdi 1 -ns "asset2" -rfn "asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset2.ma";
 file -r -ns "waow_iphone" -dr 1 -rfn "waow_iphoneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//waow iphone.ma";
 file -r -ns "asset1" -dr 1 -rfn "asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset1.ma";
 file -r -ns "asset3" -dr 1 -rfn "asset3RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset3.ma";
+file -r -ns "asset2" -dr 1 -rfn "asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Bulb/Documents/Git Stuff/Essentials/DAGV1100and1200/Maya//asset2.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiAreaLight"
 		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.3";
@@ -19,17 +21,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6F660265-45A5-53C7-7EC9-C196578DAC4B";
+fileInfo "UUID" "1DADD2A2-4B93-FE17-D747-2FAFDAC84F17";
 createNode transform -s -n "persp";
 	rename -uid "E28143B4-4625-8BC6-34EF-8C88E5371968";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.6777849066957833 5.3322942849106898 -8.1435600770326761 ;
-	setAttr ".r" -type "double3" 693.86164727036351 565.79999999995653 0 ;
+	setAttr ".t" -type "double3" 0.27866382982288207 3.0019272856159986 -4.8657869635399207 ;
+	setAttr ".r" -type "double3" 693.86164727034986 517.39999999994689 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "748167C9-4CEA-939C-D777-A9B59BA1EE6C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.9609010487123246;
+	setAttr ".coi" 6.4814552666605705;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -100,20 +102,20 @@ createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
 	setAttr ".ai_translator" -type "string" "quad";
 	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8ACD925E-4A98-3709-C22C-D4AB9566C796";
+	rename -uid "FC313CE8-40EC-9BD7-003D-78A0498A9FDE";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7B2D3CBE-4D15-8850-FDF2-5AB008A70C3F";
+	rename -uid "5EB0D231-4C03-3F82-3AEA-87963D8D8E25";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D460CB31-41F0-8D40-6F17-1D8506DB4DE3";
+	rename -uid "8461CBC0-4EA4-4DF5-CC86-CAAA5D43BEC9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0F8A53F4-44EF-1A55-CBE0-E8A43305BF26";
+	rename -uid "598C9AA7-4A8B-8CB2-C798-07BFAA0B1560";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "72E0719A-46C8-4654-521F-C081D8A540DF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DC8E801C-4B1E-F6BA-A9BB-3C93BE1B8603";
+	rename -uid "6CEC43B5-45AD-DD15-23AE-C1A05486061B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5DEC9945-40D5-4C2B-7A63-288FA2250A5E";
 	setAttr ".g" yes;
@@ -284,6 +286,18 @@ createNode reference -n "asset3RN";
 		2 "|asset3:pCylinder1|asset3:pCylinderShape1" "displaySmoothMesh" " 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "asset2RN";
+	rename -uid "58A90E13-4459-5D23-B00B-0C85541B2C56";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"asset2RN"
+		"asset2RN" 0
+		"asset2RN" 3
+		2 "|asset2:flower_thing" "translate" " -type \"double3\" -1.88722435466013039 0 0"
+		
+		2 "|asset2:flower_thing|asset2:flower_thingShape" "dispResolution" " 3"
+		2 "|asset2:flower_thing|asset2:flower_thingShape" "displaySmoothMesh" " 2";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -303,7 +317,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :lightList1;
 select -ne :defaultTextureList1;
 select -ne :standardSurface1;
@@ -313,9 +327,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 15 ".dsm";
+	setAttr -s 17 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 14 ".gn";
+	setAttr -s 15 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
