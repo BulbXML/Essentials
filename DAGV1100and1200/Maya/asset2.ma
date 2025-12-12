@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: asset2.ma
-//Last modified: Thu, Dec 11, 2025 05:08:54 PM
+//Last modified: Fri, Dec 12, 2025 03:35:15 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "85869CAF-4750-350D-B332-50B66D85EA22";
+fileInfo "UUID" "652D5175-41B1-92D3-F5B2-AA97383C4D18";
 createNode transform -s -n "persp";
 	rename -uid "7E408AC5-44FD-A120-99D6-4DA1B92F0874";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.8903698822716457 2.4882671303110033 -2.9364991571963266 ;
-	setAttr ".r" -type "double3" -15.338352729537831 473.39999999987702 0 ;
+	setAttr ".t" -type "double3" 5.9164597485553667 5.4889653473005655 0.065882574651841885 ;
+	setAttr ".r" -type "double3" -40.538352729535589 449.79999999987587 0 ;
 	setAttr ".rp" -type "double3" 5.3290705182007514e-15 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 8.3816664104449679e-16 2.1953464152423463e-15 1.0693488696801882e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -85,7 +85,9 @@ createNode transform -n "flower_thing";
 createNode mesh -n "flower_thingShape" -p "flower_thing";
 	rename -uid "17F74830-40D1-C8EE-691E-A6B824B20AE0";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:399]";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:119]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[120:399]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 8 ".gtag";
@@ -482,9 +484,9 @@ createNode mesh -n "flower_thingShape" -p "flower_thing";
 		 381 387 1 384 390 1 387 393 1 390 396 1 393 399 1 396 402 1 399 405 1 402 408 1 405 411 1
 		 408 414 1 411 417 1 414 420 1 417 423 1 420 426 1 423 429 1 426 432 1 429 435 1 432 438 1
 		 435 441 1 438 444 1 441 447 1 444 450 1 447 453 1 450 456 1 453 459 1 456 462 1 459 465 1
-		 462 468 1 465 471 1 468 474 1 471 477 1 474 480 1 363 477 1 372 480 1 482 483 1 483 484 1
-		 484 485 1 485 486 1 486 487 1 487 488 1 488 489 1 489 490 1 490 491 1 491 492 1 492 493 1
-		 493 494 1 494 495 1 495 496 1 496 497 1 497 498 1 498 499 1 499 500 1 500 501 1 501 482 1;
+		 462 468 1 465 471 1 468 474 1 471 477 1 474 480 1 363 477 1 372 480 1 482 483 0 483 484 0
+		 484 485 0 485 486 0 486 487 0 487 488 0 488 489 0 489 490 0 490 491 0 491 492 0 492 493 0
+		 493 494 0 494 495 0 495 496 0 496 497 0 497 498 0 498 499 0 499 500 0 500 501 0 501 482 0;
 	setAttr -s 400 -ch 1540 ".fc[0:399]" -type "polyFaces" 
 		f 3 1 -3 -1
 		mu 0 3 0 1 2
@@ -1292,20 +1294,20 @@ createNode mesh -n "flower_thingShape" -p "flower_thing";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A283E776-42EC-F39C-78EF-08847499BF12";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	rename -uid "078BF6AD-4D92-2C00-634D-2B9820047B35";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E61DD7E6-4AEB-0BE4-D1C3-FC9CA5C429CD";
+	rename -uid "786C336F-436A-B03A-1916-B5994AB59E44";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "162105A5-4ADD-47B9-6851-7E88B05547BC";
+	rename -uid "98CDFB96-4A5A-08C6-7B59-98A698D73788";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "06E72F48-4927-C70B-E650-02A60C5EFFC2";
+	rename -uid "C02AC7CF-4628-8321-9D04-A6BC5C92429E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5EA7A97C-4215-FE58-B369-5E9600352D70";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6FD62AD2-47DD-1FF0-F4D5-C3BCAA69ED22";
+	rename -uid "FEB5CCE6-4D9B-1500-2687-B794876FED25";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4BD49639-4BE3-B353-E1CA-A78363E11232";
 	setAttr ".g" yes;
@@ -1362,6 +1364,48 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "A837E85B-4282-2BD3-1047-2CA87983FDB4";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode blinn -n "pot";
+	rename -uid "8DF441A7-49CB-6B02-66F2-3FBFD0AD143F";
+	setAttr ".c" -type "float3" 0.2543 0.1655 0.1496 ;
+	setAttr ".rfl" 0;
+	setAttr ".ec" 0.67126154899597168;
+	setAttr ".sro" 0.11888112127780914;
+createNode shadingEngine -n "blinn1SG";
+	rename -uid "AD8B29AC-4F77-FAFE-ED8E-B1A24DC71003";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "9337C66E-40E0-AF07-BC59-55A8501BDC7F";
+createNode groupId -n "groupId31";
+	rename -uid "85E8490D-4C0A-3C62-A92D-1D8DA7CDDE33";
+	setAttr ".ihi" 0;
+createNode blinn -n "plant";
+	rename -uid "047EADD5-4170-4CCB-AA3B-F3B744256AA7";
+	setAttr ".c" -type "float3" 0.1996 0.52999997 0.2089 ;
+createNode shadingEngine -n "blinn2SG";
+	rename -uid "C0A3C8AB-4BC5-0729-E006-339A3F2E1D7D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "7DC6249F-4CBB-6112-73F2-D2843DCE2D0C";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "60AF664A-4131-1C66-8D8B-71A53222C77B";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -615.47616601936511 ;
+	setAttr ".tgi[0].vh" -type "double2" 604.76188073082676 44.047617297323995 ;
+	setAttr -s 4 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 338.57144165039062;
+	setAttr ".tgi[0].ni[0].y" -101.42857360839844;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 31.428571701049805;
+	setAttr ".tgi[0].ni[1].y" -101.42857360839844;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 31.428571701049805;
+	setAttr ".tgi[0].ni[2].y" -101.42857360839844;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 338.57144165039062;
+	setAttr ".tgi[0].ni[3].y" -101.42857360839844;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1373,10 +1417,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 4 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 6 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -1387,7 +1431,6 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -1409,17 +1452,45 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId30.id" "flower_thingShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "flower_thingShape.iog.og[0].gco";
+connectAttr "blinn2SG.mwc" "flower_thingShape.iog.og[0].gco";
+connectAttr "groupId31.id" "flower_thingShape.iog.og[1].gid";
+connectAttr "blinn1SG.mwc" "flower_thingShape.iog.og[1].gco";
 connectAttr "groupId29.id" "flower_thingShape.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "pot.oc" "blinn1SG.ss";
+connectAttr "flower_thingShape.iog.og[1]" "blinn1SG.dsm" -na;
+connectAttr "groupId31.msg" "blinn1SG.gn" -na;
+connectAttr "blinn1SG.msg" "materialInfo1.sg";
+connectAttr "pot.msg" "materialInfo1.m";
+connectAttr "plant.oc" "blinn2SG.ss";
+connectAttr "flower_thingShape.iog.og[0]" "blinn2SG.dsm" -na;
+connectAttr "groupId30.msg" "blinn2SG.gn" -na;
+connectAttr "blinn2SG.msg" "materialInfo2.sg";
+connectAttr "plant.msg" "materialInfo2.m";
+connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "pot.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "plant.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
+connectAttr "blinn2SG.pa" ":renderPartition.st" -na;
+connectAttr "pot.msg" ":defaultShaderList1.s" -na;
+connectAttr "plant.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "flower_thingShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "flower_thingShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
 // End of asset2.ma
